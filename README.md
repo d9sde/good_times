@@ -25,10 +25,9 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
 ![de01](https://github.com/user-attachments/assets/0f7fd8da-24d5-48e9-ad70-e043ddabaaa6)
 
-
+<div align="center">
 <h3 align="center">Good Times</h3>
 
   <p align="center">
@@ -138,7 +137,8 @@ You can control it via keyboard or touch screen.
 <!-- USAGE EXAMPLES -->
 ## Examples
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+![en01](https://github.com/user-attachments/assets/700e0d6c-f9c4-423e-a8c3-1f1a0c81e2c2)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
