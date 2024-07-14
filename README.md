@@ -37,14 +37,14 @@
 <h3 align="center">Good Times</h3>
 
   <p align="center">
-    project_description
+    Let unused displays have a good time.
     <br />
     <a href="https://github.com/d9sde/good_times"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://d9s.de/good_times">View Demo (English)</a>
+    <a href="https://d9s.de/good_times" target="_new">View Demo (English)</a>
     ·
-    <a href="https://d9s.de/schoene_zeit">View Demo (German)</a>
+    <a href="https://d9s.de/schoene_zeit" target="_new">View Demo (German)</a>
     ·    
     <a href="https://github.com/d9sde/good_times/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -71,12 +71,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#examples">Examples</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#versions">Versions</a></li>
   </ol>
 </details>
 
@@ -95,14 +95,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * ![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
 
@@ -118,34 +110,38 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+You can use any display or screen that can show a webpage - no matter it it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone.
+
+* English version
   ```sh
-  npm install npm@latest -g
+  https://d9s.de/good_times
+  ```
+
+* German version
+  ```sh
+  https://d9s.de/schoene_zeit
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+No installation needed, however you can downoad this repository for offline use if you want to.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Operation
+
+You can control it via keyboard or touch screen.
+
+* Press 'f' or swipe up or down to toogle full screen mode.
+* Press 'c' or swipe right or left to tollge color mode.
+* Press 'v' to see version.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Examples
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -158,10 +154,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] more languages
+- [ ] maybe date support
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -172,7 +166,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**, especially adding mor languages.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -199,20 +193,19 @@ Distributed under the GNU AFFERO GENERAL PUBLIC LICENSE. See `LICENSE.txt` for m
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Danny Schreiter - [d9s.de](https://d9s.de) - hey@d9s.de
+
+See [www.d9s.de/kontakt](https://d9s.de/kontakt) for more contact options.
 
 Project Link: [https://github.com/d9sde/good_times](https://github.com/d9sde/good_times)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- VERSIONS -->
+## Versions
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+* 1.0 initial version
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -249,8 +242,3 @@ Project Link: [https://github.com/d9sde/good_times](https://github.com/d9sde/goo
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-
-Versionslite
-0.1 erster Versuch
-0.2 Farboption
-0.3 Fullscreen-Mode
