@@ -87,7 +87,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Ever wondered what to do with your unused old iPad, pc monitor or tv screen? This project turns your old devices into a stylish and decorative text clock.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,12 +105,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The project uses a simple website that automatically checks the size and aspect ratio of the current screen and then calculates a way to show a *good time* that fits the screen as pleasant as possible.
 
 ### Prerequisites
 
-You can use any display or screen that can show a webpage - no matter it it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone.
+You can use any display or screen that can show a webpage - no matter it it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone. You can also use this clock on your daily-used computer and let it live in a seperate browser tab.
 
 * English version
   ```sh
@@ -157,7 +156,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] more languages
 - [ ] maybe date support
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/d9sde/good_times/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -213,16 +212,16 @@ Project Link: [https://github.com/d9sde/good_times](https://github.com/d9sde/goo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/d9sde/good_times.svg?style=for-the-badge
+[contributors-url]: https://github.com/d9sde/good_times/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/d9sde/good_times.svg?style=for-the-badge
+[forks-url]: https://github.com/d9sde/good_times/network/members
+[stars-shield]: https://img.shields.io/github/stars/d9sde/good_times.svg?style=for-the-badge
+[stars-url]: https://github.com/d9sde/good_times/stargazers
+[issues-shield]: https://img.shields.io/github/issues/d9sde/good_times.svg?style=for-the-badge
+[issues-url]: https://github.com/d9sde/good_times/issues
+[license-shield]: https://img.shields.io/github/license/d9sde/good_times.svg?style=for-the-badge
+[license-url]: https://github.com/d9sde/good_times/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
