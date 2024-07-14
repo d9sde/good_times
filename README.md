@@ -24,8 +24,8 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
-![de01](https://github.com/user-attachments/assets/0f7fd8da-24d5-48e9-ad70-e043ddabaaa6)
+![en02](https://github.com/user-attachments/assets/c1b66283-1441-489a-b6e0-5d4269c7221f)
+
 
 <div align="center">
 <h3 align="center">Good Times</h3>
