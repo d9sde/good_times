@@ -18,12 +18,8 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -38,8 +34,6 @@
 
   <p align="center">
     Let unused displays have a good time.
-    <br />
-    <a href="https://github.com/d9sde/good_times"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://d9s.de/good_times" target="_new">View Demo (English)</a>
@@ -87,7 +81,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Ever wondered what to do with your unused old iPad, pc monitor or tv screen? This project turns your old devices into a stylish and decorative text clock.
+Ever wondered what to do with your unused old iPad, pc monitor or tv screen? This project turns your old device into a stylish and decorative text clock.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,8 +89,8 @@ Ever wondered what to do with your unused old iPad, pc monitor or tv screen? Thi
 
 ### Built With
 
-* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-* ![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,14 +103,16 @@ The project uses a simple website that automatically checks the size and aspect 
 
 ### Prerequisites
 
-You can use any display or screen that can show a webpage - no matter it it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone. You can also use this clock on your daily-used computer and let it live in a seperate browser tab.
+You can use any display or screen that can show a webpage - no matter if it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone. You can also use this clock on your daily-used computer and let it live in a seperate browser tab.
 
-* English version
+All you need to do ist to open the following webpage in a browser and toggle it into full-screen mode.
+
+* English version:
   ```sh
   https://d9s.de/good_times
   ```
 
-* German version
+* German version:
   ```sh
   https://d9s.de/schoene_zeit
   ```
@@ -132,9 +128,10 @@ No installation needed, however you can downoad this repository for offline use 
 
 You can control it via keyboard or touch screen.
 
-* Press 'f' or swipe up or down to toogle full screen mode.
-* Press 'c' or swipe right or left to tollge color mode.
-* Press 'v' to see version.
+* Press `f` or swipe up or down to toggle full screen mode.
+* Press `c` or swipe right or left to toggle color mode.
+* Press `v` to see version.
+* Press `r` to re-arrange.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,8 +140,6 @@ You can control it via keyboard or touch screen.
 ## Examples
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
