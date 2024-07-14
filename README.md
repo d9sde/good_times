@@ -26,9 +26,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/d9sde/good_times">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+![de01](https://github.com/user-attachments/assets/0f7fd8da-24d5-48e9-ad70-e043ddabaaa6)
+
 
 <h3 align="center">Good Times</h3>
 
