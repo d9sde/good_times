@@ -24,12 +24,10 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/d9sde/good_times">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+![en02](https://github.com/user-attachments/assets/c1b66283-1441-489a-b6e0-5d4269c7221f)
 
+
+<div align="center">
 <h3 align="center">Good Times</h3>
 
   <p align="center">
@@ -139,7 +137,8 @@ You can control it via keyboard or touch screen.
 <!-- USAGE EXAMPLES -->
 ## Examples
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+![en01](https://github.com/user-attachments/assets/700e0d6c-f9c4-423e-a8c3-1f1a0c81e2c2)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
