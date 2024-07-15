@@ -89,6 +89,9 @@ Ever wondered what to do with your unused old iPad, pc monitor or tv screen? Thi
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
 
+<br />
+For more information on p5.js see <a href="https://p5js.org/">p5js.org</a>.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
