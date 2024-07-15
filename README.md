@@ -34,9 +34,9 @@
     Let unused displays have a good time.
     <br />
     <br />
-    <a href="https://goodtimes.d9s.de/" target="_new">View Demo (English)</a>
+    <a href="https://goodtimes.d9s.de/" target="_blank">View Demo (English)</a>
     ·
-    <a href="https://schoenezeit.d9s.de/" target="_new">View Demo (German)</a>
+    <a href="https://schoenezeit.d9s.de/" target="_blank">View Demo (German)</a>
     ·    
     <a href="https://github.com/d9sde/good_times/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -106,12 +106,12 @@ All you need to do ist to open the following webpage in a browser and toggle it 
 
 * English version:
   ```sh
-  [https://goodtimes.d9s.de/](https://goodtimes.d9s.de/)
+  https://goodtimes.d9s.de/
   ```
 
 * German version:
   ```sh
-  [https://schoenezeit.d9s.de/](https://schoenezeit.d9s.de/)
+  https://schoenezeit.d9s.de/
   ```
 
 ### Installation
