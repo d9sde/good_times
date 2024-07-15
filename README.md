@@ -61,6 +61,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#operation">Operation</a></li>
       </ul>
     </li>
     <li><a href="#examples">Examples</a></li>
@@ -76,8 +77,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Ever wondered what to do with your unused old iPad, pc monitor or tv screen? This project turns your old device into a stylish and decorative text clock.
 
