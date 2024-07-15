@@ -16,7 +16,7 @@ function generate_time_string()
     case 38: case 39: case 40: case 41: case 42: text+= "twenty to "; h++; break;
     case 43: case 44: case 45: case 46: case 47: text+= "a quarter to "; h++; break;
     case 48: case 49: case 50: case 51: case 52: text+= "ten to "; h++; break;
-    case 53: case 54: case 55: case 56: case 57: text+= "fife to "; h++; break;
+    case 53: case 54: case 55: case 56: case 57: text+= "five to "; h++; break;
     case 58: case 59: text+= "almost "; h++; break;
   }
 

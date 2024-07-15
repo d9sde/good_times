@@ -1,6 +1,6 @@
 // Danny Schreiter 2024 // www.d9s.de
 
-let Version = 0.48;
+let Version = "1.00";
 let display_mode = 0;         // 0 -black background // 1 - colored background
 
 let total_width = 400, total_height = 400;
@@ -136,7 +136,7 @@ function reorder_boxes()                                                 // find
         }
         // no is now the id of the biggest rectangle - which will noe be divided
 
-        if(box_obj[no+OffsetB].seitenverh > 2)      // divide wide rectangles vertically
+        if(box_obj[no+OffsetB].aspect_ratio > 2)      // divide wide rectangles vertically
           {
               let Teilung = random(0.3 * box_obj[no+OffsetB].Breite, 0.7 * box_obj[no+OffsetB].Breite);
               let alteBreite = box_obj[no+OffsetB].Breite;
@@ -144,7 +144,7 @@ function reorder_boxes()                                                 // find
               let Iterationstiefe = box_obj[no+OffsetB].iteration;
               box_obj[no+OffsetB].Breite = Teilung;
               box_obj[no+OffsetB].iteration = Iterationstiefe + 1;
-              box_obj[no+OffsetB].berechnen();
+              box_obj[no+OffsetB].calculate();
 
               box_obj[number_of_boxes+1+OffsetB] = new Rechteck(box_obj[no+OffsetB].posX + box_obj[no+OffsetB].Breite, box_obj[no+OffsetB].posY, alteBreite - box_obj[no+OffsetB].Breite, box_obj[no+OffsetB].Hoehe, Iterationstiefe + 1);
               number_of_boxes++;
@@ -154,7 +154,7 @@ function reorder_boxes()                                                 // find
             let Iterationstiefe = box_obj[no+OffsetB].iteration;
             box_obj[no+OffsetB].Hoehe = Teilung;
             box_obj[no+OffsetB].iteration = Iterationstiefe + 1;
-            box_obj[no+OffsetB].berechnen();
+            box_obj[no+OffsetB].calculate();
      
             box_obj[number_of_boxes+1+OffsetB] = new Rechteck(box_obj[no+OffsetB].posX, box_obj[no+OffsetB].posY + box_obj[no+OffsetB].Hoehe, box_obj[no+OffsetB].Breite, alteHoehe - box_obj[no+OffsetB].Hoehe, Iterationstiefe + 1);    
             number_of_boxes++;           
@@ -183,7 +183,7 @@ function reorder_boxes()                                                 // find
     // calculate how well the words fit into this arrangemente
     error_sum = 1;
     for(i = 1; i <= number_of_boxes; i++) {
-      let current_error = box_obj[i + OffsetA].seitenverh / text_obj[i].seitenverh;
+      let current_error = box_obj[i + OffsetA].aspect_ratio / text_obj[i].aspect_ratio;
       if(current_error < 1)
         current_error = 1 / current_error;
       error_sum = error_sum * current_error;
@@ -198,9 +198,9 @@ class TextBlock {
     this.bgcolor = color(random(0,255),random(0,255),random(0,255),0);
     this.fade_in = 0;
     this.fade_out = 0;
-    this.seitenverh = 1;
-    this.maxScaling = 1;
-    this.berechnen();
+    this.aspect_ratio = 1;
+    this.max_scaling = 1;
+    this.calculate();
     // zufällig Schriftauswahl
     switch(random([1,2,3,4,5])) {
       case 1: this.font = font1; break;
@@ -211,15 +211,15 @@ class TextBlock {
     }
   }
 
-  berechnen() {
+  calculate() {
     push();
     textFont(this.font);
     let tbox = this.font.textBounds(this.text, 0, 0);
-    this.seitenverh = tbox.w / tbox.h; 
+    this.aspect_ratio = tbox.w / tbox.h; 
     pop(); 
   }
 
-  draw_text(posX, posY, breite, hoehe)         // zeichnet den Text in eine Box, so dass er die Wände berührt.
+  draw_text(posX, posY, breite, hoehe)        
   { 
     if(this.fade_in > millis())
       {
@@ -241,17 +241,17 @@ class TextBlock {
     let sh = hoehe / tbox.h;  
   
     if(sw < sh)
-      this.maxScaling = sw;
+      this.max_scaling = sw;
     else
-      this.maxScaling = sh;  
+      this.max_scaling = sh;  
 
-    let relHoehe = tbox.h * this.maxScaling;
-    let relBreite = tbox.w * this.maxScaling;    
+    let relHoehe = tbox.h * this.max_scaling;
+    let relBreite = tbox.w * this.max_scaling;    
 
     translate(posX, posY);
-    scale(this.maxScaling);
+    scale(this.max_scaling);
 
-    text(this.text, (breite / 2 - relBreite / 2) / this.maxScaling  - tbox.x, (hoehe / 2 - relHoehe  / 2) / this.maxScaling - tbox.y); 
+    text(this.text, (breite / 2 - relBreite / 2) / this.max_scaling  - tbox.x, (hoehe / 2 - relHoehe  / 2) / this.max_scaling - tbox.y); 
     pop();
   }
 
@@ -272,24 +272,23 @@ class TextBlock {
 
 
 class Rechteck {
-  constructor(posx, posy, breite, hoehe, Iterationstiefe) {
+  constructor(posx, posy, w, h, Iterationstiefe) {
     this.posX = posx;
     this.posY = posy;
-    this.Breite = breite;
-    this.Hoehe = hoehe;
+    this.Breite = w;
+    this.Hoehe = h;
     this.col = color(random(0,255),random(0,255),random(0,255),100);
-    this.seitenverh = 1;
+    this.aspect_ratio = 1;
     this.mass = 1;
     this.order = 0;
     this.iteration = Iterationstiefe;
-    this.berechnen();
+    this.calculate();
   }
 
-  berechnen() {
-    this.seitenverh = this.Breite / this.Hoehe;   
-    this.mass = this.Breite+this.Hoehe;           // Maß für die optische Größe
-    //this.order = (this.posY + this.Hoehe / 2) + ((this.posX + this.Breite / 2) / 5) + 10000;      // Reihenfolge-Maßzahl anhand der Flächenmitte  
-    this.order = this.posY + ((this.posX) / 5) + 10000;      // Reihenfolge-Maßzahl anhand der oberen linken Ecke
+  calculate() {
+    this.aspect_ratio = this.Breite / this.Hoehe;   
+    this.mass = this.Breite+this.Hoehe;                      // a measure of size
+    this.order = this.posY + ((this.posX) / 3) + 10000;      // this helps to find the right reading order
   }
 
   draw_text() {
@@ -311,7 +310,7 @@ class Rechteck {
 }
 
 
-function windowResized() {                // nach Änderung der Fenstergröße komplett neu zeichnen
+function windowResized() { 
   total_width = windowWidth;
   total_height = windowHeight;
   resizeCanvas(total_width, total_height);   
@@ -329,13 +328,13 @@ function keyPressed() {
     case 67: display_mode = 1 - display_mode; break;           // c ... color
     case 82: redraw_trigger = true;  break;                    // r ... redraw  
     case 70: fs = fullscreen(); fullscreen(!fs); break;        // f ... fullscreen
-    case 86: next_string = "Version " + Version; status_timer = millis() + 15000; break;         // v ... Version anzeigen
+    case 86: next_string = "Version " + Version; status_timer = millis() + 15000; break;         // v ... show version number
   }
 }
 
 
-function touchMoved() {             // erkennt Maus- und Fingergesten und setzt die Variable "TouchRichtung" entsprechend.
-  if(millis() - lastPos > 100)      // zu lange her?
+function touchMoved() { 
+  if(millis() - lastPos > 100)      // too long ago?
   {
     lastPos = millis();
     altX = mouseX;
@@ -343,7 +342,7 @@ function touchMoved() {             // erkennt Maus- und Fingergesten und setzt 
     return false;
   }    
 
-  if(millis() - lastPos > 20)      // Zeitraum nicht zu kurz
+  if(millis() - lastPos > 20)      // too short?
     {      
       var dirX = floor(mouseX - altX);
       var dirY = floor(mouseY - altY);
@@ -356,20 +355,20 @@ function touchMoved() {             // erkennt Maus- und Fingergesten und setzt 
       
       if(abs(dirX)>abs(dirY))
         {
-          if(dirX>0)                      // Bewegung nach rechts -> Farbe an
+          if(dirX>0)                      // swiping right/left -> color on/off
             display_mode = 1;
-          else                            // Bewegung nach links -> Farbe aus
+          else
             display_mode = 0;    
         }
       else
         {
-          if(dirY>0)                      // Bewegung nach unten -> Volbild aus
+          if(dirY>0)                      // swiping up/down -> toggle fullsize mode
             fs_trigger = 2;
-          else                            // Bewegung nach oben -> Volbild an
+          else
             fs_trigger = 1;     
         }        
     }
-  return false;        // false verhindert, dass der Browser die Geste zusätzlich auswertet
+  return false;   
 }
 
 function touchEnded() {
