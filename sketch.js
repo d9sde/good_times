@@ -1,4 +1,5 @@
 // Danny Schreiter 2024 // www.d9s.de
+// built using p5.js - see https://p5js.org/
 
 let Version = "1.00";
 let display_mode = 0;         // 0 -black background // 1 - colored background
