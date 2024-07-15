@@ -90,7 +90,7 @@ Ever wondered what to do with your unused old iPad, pc monitor or tv screen? Thi
 ![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
 
 <br />
-For more information on p5.js see <a href="https://p5js.org/">p5js.org</a>.
+For more information on p5.js see <a href="https://p5js.org/">p5js.org</a>.<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +103,7 @@ The project uses a simple website that automatically checks the size and aspect 
 
 ### Prerequisites
 
-You can use any display or screen that can show a webpage - no matter if it's a old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone. You can also use this clock on your daily-used computer and let it live in a seperate browser tab.
+You can use any display or screen that can show a webpage - no matter if it's an old PC monitor fed by a raspberry pi or an unused tabled, iPad oder smartphone. You can also use this clock on your daily-used computer and let it live in a seperate browser tab.
 
 All you need to do ist to open the following webpage in a browser and toggle it into full-screen mode.
 
