@@ -1,8 +1,9 @@
 // Danny Schreiter 2024 // www.d9s.de
 // built using p5.js - see https://p5js.org/
 
-let Version = "1.00";
+let version = "1.10";
 let display_mode = 0;         // 0 -black background // 1 - colored background
+let outer_margin = 0.05;      // 5% margin to all sides
 
 let total_width = 400, total_height = 400;
 let number_of_boxes = 1, number_of_words = 1, max_number_of_words = 90, OffsetA = 100, OffsetB = 200;
@@ -122,7 +123,7 @@ function reorder_boxes()                                                 // find
       delete box_obj[i+ OffsetB];       
   }
 
-  box_obj[1+OffsetB] = new Rechteck(0,0,total_width, total_height, 1);
+  box_obj[1+OffsetB] = new Rechteck(total_width*outer_margin,total_height*outer_margin,total_width*(1-2*outer_margin), total_height*(1-2*outer_margin), 1);    // create first box, as big as the visible screen
   number_of_boxes = 1;
 
   while(number_of_boxes < number_of_words)
@@ -326,10 +327,10 @@ function windowResized() {
 function keyPressed() {       
   switch(keyCode)
   {
-    case 67: display_mode = 1 - display_mode; break;           // c ... color
-    case 82: redraw_trigger = true;  break;                    // r ... redraw  
-    case 70: fs = fullscreen(); fullscreen(!fs); break;        // f ... fullscreen
-    case 86: next_string = "Version " + Version; status_timer = millis() + 15000; break;         // v ... show version number
+    case 67: display_mode = 1 - display_mode; break;                                             // c ... color
+    case 82: redraw_trigger = true;  break;                                                      // r ... redraw  
+    case 70: fs = fullscreen(); fullscreen(!fs); break;                                          // f ... fullscreen
+    case 86: next_string = "Version " + version; status_timer = millis() + 15000; break;         // v ... show version number
   }
 }
 
@@ -351,7 +352,7 @@ function touchMoved() {
       altX = mouseX;
       altY = mouseY;  
       
-      if(abs(dirX) + abs(dirY) < 20)      // Bewegung zu klein
+      if(abs(dirX) + abs(dirY) < 20)      // touch movement not wide enough?
         return false;
       
       if(abs(dirX)>abs(dirY))
