@@ -1,7 +1,7 @@
 // Danny Schreiter 2024 // www.d9s.de
 // built using p5.js - see https://p5js.org/
 
-let version = "1.10";
+let version = "1.11";
 let display_mode = 0;         // 0 -black background // 1 - colored background
 let outer_margin = 0.05;      // 5% margin to all sides
 
@@ -62,7 +62,7 @@ function draw() {
 
 
   for(i = 1; i <= number_of_words; i++) {               // draw the new text
-    text_obj[i].draw_text_with_padding(box_obj[i].posX,box_obj[i].posY,box_obj[i].Breite,box_obj[i].Hoehe,10);
+    text_obj[i].draw_text_with_padding(box_obj[i].posX,box_obj[i].posY,box_obj[i].width,box_obj[i].height,10);
   }
 }
 
@@ -85,7 +85,7 @@ function ceate_design_from_string(whole_string) {
   let words = split(whole_string," ");
 
   for (let i = 0; i < min(words.length, max_number_of_words); i++) {  
-    text_obj[i+1] = new TextBlock(words[i]);
+    text_obj[i+1] = new text_box(words[i]);
     number_of_words = i+1;
     console.log(words[i]);
   }
@@ -106,7 +106,7 @@ function ceate_design_from_string(whole_string) {
           }
 
           for(i = 1; i <= number_of_words; i++) {                           
-            box_obj[i] = new Rechteck(box_obj[i + OffsetA].posX,box_obj[i + OffsetA].posY,box_obj[i + OffsetA].Breite,box_obj[i + OffsetA].Hoehe,box_obj[i + OffsetA].order,box_obj[i + OffsetA].iteration);
+            box_obj[i] = new rect_box(box_obj[i + OffsetA].posX,box_obj[i + OffsetA].posY,box_obj[i + OffsetA].width,box_obj[i + OffsetA].height,box_obj[i + OffsetA].order,box_obj[i + OffsetA].iteration);
           }          
         }
     }
@@ -123,7 +123,7 @@ function reorder_boxes()                                                 // find
       delete box_obj[i+ OffsetB];       
   }
 
-  box_obj[1+OffsetB] = new Rechteck(total_width*outer_margin,total_height*outer_margin,total_width*(1-2*outer_margin), total_height*(1-2*outer_margin), 1);    // create first box, as big as the visible screen
+  box_obj[1+OffsetB] = new rect_box(total_width*outer_margin,total_height*outer_margin,total_width*(1-2*outer_margin), total_height*(1-2*outer_margin), 1);    // create first box, as big as the visible screen
   number_of_boxes = 1;
 
   while(number_of_boxes < number_of_words)
@@ -136,29 +136,29 @@ function reorder_boxes()                                                 // find
               no = i; gr = box_obj[i+OffsetB].mass;
             }
         }
-        // no is now the id of the biggest rectangle - which will noe be divided
+        // no is now the id of the biggest rectangle - which will now be divided
 
-        if(box_obj[no+OffsetB].aspect_ratio > 2)      // divide wide rectangles vertically
+        if(box_obj[no+OffsetB].aspect_ratio > 2)      // split wide rectangles vertically
           {
-              let Teilung = random(0.3 * box_obj[no+OffsetB].Breite, 0.7 * box_obj[no+OffsetB].Breite);
-              let alteBreite = box_obj[no+OffsetB].Breite;
+              let split_at = random(0.3 * box_obj[no+OffsetB].width, 0.7 * box_obj[no+OffsetB].width);
+              let alteBreite = box_obj[no+OffsetB].width;
 
-              let Iterationstiefe = box_obj[no+OffsetB].iteration;
-              box_obj[no+OffsetB].Breite = Teilung;
-              box_obj[no+OffsetB].iteration = Iterationstiefe + 1;
+              let iteration_depth = box_obj[no+OffsetB].iteration;
+              box_obj[no+OffsetB].width = split_at;
+              box_obj[no+OffsetB].iteration = iteration_depth + 1;
               box_obj[no+OffsetB].calculate();
 
-              box_obj[number_of_boxes+1+OffsetB] = new Rechteck(box_obj[no+OffsetB].posX + box_obj[no+OffsetB].Breite, box_obj[no+OffsetB].posY, alteBreite - box_obj[no+OffsetB].Breite, box_obj[no+OffsetB].Hoehe, Iterationstiefe + 1);
+              box_obj[number_of_boxes+1+OffsetB] = new rect_box(box_obj[no+OffsetB].posX + box_obj[no+OffsetB].width, box_obj[no+OffsetB].posY, alteBreite - box_obj[no+OffsetB].width, box_obj[no+OffsetB].height, iteration_depth + 1);
               number_of_boxes++;
           } else {                                // otherwise horizontally
-            let Teilung = random(0.3 * box_obj[no+OffsetB].Hoehe, 0.7 * box_obj[no+OffsetB].Hoehe);
-            let alteHoehe= box_obj[no+OffsetB].Hoehe;
-            let Iterationstiefe = box_obj[no+OffsetB].iteration;
-            box_obj[no+OffsetB].Hoehe = Teilung;
-            box_obj[no+OffsetB].iteration = Iterationstiefe + 1;
+            let split_at = random(0.3 * box_obj[no+OffsetB].height, 0.7 * box_obj[no+OffsetB].height);
+            let alteHoehe= box_obj[no+OffsetB].height;
+            let iteration_depth = box_obj[no+OffsetB].iteration;
+            box_obj[no+OffsetB].height = split_at;
+            box_obj[no+OffsetB].iteration = iteration_depth + 1;
             box_obj[no+OffsetB].calculate();
      
-            box_obj[number_of_boxes+1+OffsetB] = new Rechteck(box_obj[no+OffsetB].posX, box_obj[no+OffsetB].posY + box_obj[no+OffsetB].Hoehe, box_obj[no+OffsetB].Breite, alteHoehe - box_obj[no+OffsetB].Hoehe, Iterationstiefe + 1);    
+            box_obj[number_of_boxes+1+OffsetB] = new rect_box(box_obj[no+OffsetB].posX, box_obj[no+OffsetB].posY + box_obj[no+OffsetB].height, box_obj[no+OffsetB].width, alteHoehe - box_obj[no+OffsetB].height, iteration_depth + 1);    
             number_of_boxes++;           
           }
 
@@ -179,7 +179,7 @@ function reorder_boxes()                                                 // find
       }
 
       box_obj[no].order+= 100000;
-      box_obj[i + OffsetA] = new Rechteck(box_obj[no].posX,box_obj[no].posY,box_obj[no].Breite,box_obj[no].Hoehe,box_obj[no].order,box_obj[no].iteration);
+      box_obj[i + OffsetA] = new rect_box(box_obj[no].posX,box_obj[no].posY,box_obj[no].width,box_obj[no].height,box_obj[no].order,box_obj[no].iteration);
     }
 
     // calculate how well the words fit into this arrangemente
@@ -192,7 +192,7 @@ function reorder_boxes()                                                 // find
     }
 }
 
-class TextBlock {
+class text_box {
   constructor(first_text) {
     this.font = font1;
     this.text = first_text;
@@ -203,7 +203,7 @@ class TextBlock {
     this.aspect_ratio = 1;
     this.max_scaling = 1;
     this.calculate();
-    // zufällig Schriftauswahl
+    // choose font randomly
     switch(random([1,2,3,4,5])) {
       case 1: this.font = font1; break;
       case 2: this.font = font2; break;
@@ -273,23 +273,23 @@ class TextBlock {
 
 
 
-class Rechteck {
-  constructor(posx, posy, w, h, Iterationstiefe) {
+class rect_box {
+  constructor(posx, posy, w, h, iteration_depth) {
     this.posX = posx;
     this.posY = posy;
-    this.Breite = w;
-    this.Hoehe = h;
+    this.width = w;
+    this.height = h;
     this.col = color(random(0,255),random(0,255),random(0,255),100);
     this.aspect_ratio = 1;
     this.mass = 1;
     this.order = 0;
-    this.iteration = Iterationstiefe;
+    this.iteration = iteration_depth;
     this.calculate();
   }
 
   calculate() {
-    this.aspect_ratio = this.Breite / this.Hoehe;   
-    this.mass = this.Breite+this.Hoehe;                      // a measure of size
+    this.aspect_ratio = this.width / this.height;   
+    this.mass = this.width+this.height;                      // a measure of size
     this.order = this.posY + ((this.posX) / 3) + 10000;      // this helps to find the right reading order
   }
 
@@ -298,17 +298,19 @@ class Rechteck {
     fill(this.col);
     stroke(0,0);
     if(display_mode == 1) {
-      rect(this.posX,this.posY,this.Breite,this.Hoehe);
+      rect(this.posX,this.posY,this.width,this.height);
     }
     pop();
   }
 
+    /*
   markieren(no){
     push();
     fill(0);textSize(10);
     rect(no,this.posX,this.posY);
     pop();
   }
+      */
 }
 
 
