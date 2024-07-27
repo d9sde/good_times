@@ -1,7 +1,7 @@
 // Danny Schreiter 2024 // www.d9s.de
 // built using p5.js - see https://p5js.org/
 
-let version = "1.11";
+let version = "1.12";
 let display_mode = 0;         // 0 -black background // 1 - colored background
 let outer_margin = 0.05;      // 5% margin to all sides
 
@@ -87,7 +87,6 @@ function ceate_design_from_string(whole_string) {
   for (let i = 0; i < min(words.length, max_number_of_words); i++) {  
     text_obj[i+1] = new text_box(words[i]);
     number_of_words = i+1;
-    console.log(words[i]);
   }
 
 
