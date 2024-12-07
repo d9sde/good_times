@@ -19,7 +19,8 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <div align="center">
-<a href="https://goodtimes.d9s.de/" target="_blank"><div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;">view English demo</div></a>
+
+<div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;"><a href="https://goodtimes.d9s.de/" target="_blank">view English demo</a></div>
 
 <a href="https://schoenezeit.d9s.de/" target="_blank"><div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;">view German demo</div></a>
 </div>
@@ -91,8 +92,8 @@ Ever wondered what to do with your unused old iPad, pc monitor or tv screen? Thi
 
 ### Built With
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)(https://en.wikipedia.org/wiki/HTML5)
+![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)(https://en.wikipedia.org/wiki/Processing#p5.js)
 
 <br />
 For more information on p5.js see <a href="https://p5js.org/">p5js.org</a>.<br>
