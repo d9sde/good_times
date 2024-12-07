@@ -1,29 +1,7 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
+<h2 align="center"><a href="https://goodtimes.d9s.de/" target="_blank">view English demo</a> | <a href="https://schoenezeit.d9s.de/" target="_blank">view German demo</div></h3>
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<div align="center">
-
-<div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;"><a href="https://goodtimes.d9s.de/" target="_blank">view English demo</a></div>
-
-<a href="https://schoenezeit.d9s.de/" target="_blank"><div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;">view German demo</div></a>
-</div>
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
@@ -92,8 +70,8 @@ Ever wondered what to do with your unused old iPad, pc monitor or tv screen? Thi
 
 ### Built With
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)(https://en.wikipedia.org/wiki/HTML5)
-![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)(https://en.wikipedia.org/wiki/Processing#p5.js)
+[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://en.wikipedia.org/wiki/HTML5)
+[![p5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)](https://en.wikipedia.org/wiki/Processing#p5.js)
 
 <br />
 For more information on p5.js see <a href="https://p5js.org/">p5js.org</a>.<br>
