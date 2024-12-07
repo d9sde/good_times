@@ -18,13 +18,18 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<div align="center">
+<a href="https://goodtimes.d9s.de/" target="_blank"><div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;">view English demo</div></a>
+
+<a href="https://schoenezeit.d9s.de/" target="_blank"><div style="width: 150px; height: 40px; font-size: 20px; color: #000000; background: linear-gradient(to top right, #1dd862, #01af1b); border: 2px solid #006c29; border-radius: 10px; font-family: arial; transition: all 0.25s ease;">view German demo</div></a>
+</div>
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 
 
 <!-- PROJECT LOGO -->
-![en02](https://github.com/user-attachments/assets/c1b66283-1441-489a-b6e0-5d4269c7221f)
+[![en02](https://github.com/user-attachments/assets/c1b66283-1441-489a-b6e0-5d4269c7221f)](https://goodtimes.d9s.de/)
 
 
 <div align="center">
@@ -150,6 +155,7 @@ You can control it via keyboard or touch screen.
 ## Roadmap
 
 - [ ] more languages
+- [ ] improve computation of reading order
 - [ ] maybe date support
 
 See the [open issues](https://github.com/d9sde/good_times/issues) for a full list of proposed features (and known issues).
