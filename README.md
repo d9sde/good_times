@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-<h2 align="center"><a href="https://goodtimes.d9s.de/" target="_new">&gt; view English demo &lt;</a> | <a href="https://schoenezeit.d9s.de/" target="_new">&gt; view German demo &lt;</div></h3>
+<h2 align="center"><a href="https://goodtimes.d9s.de/" target="_new">[ view English demo ]</a> | <a href="https://schoenezeit.d9s.de/" target="_new">[ view German demo ]</div></h3>
 
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

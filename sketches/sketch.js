@@ -1,8 +1,8 @@
 // Danny Schreiter 2024 // www.d9s.de
 // built using p5.js - see https://p5js.org/
 
-let version = "1.12";
-let display_mode = 0;         // 0 -black background // 1 - colored background
+let version = "1.13";
+let display_mode = 0;         // 0 - black background // 1 - colored background
 let outer_margin = 0.05;      // 5% margin to all sides
 
 let total_width = 400, total_height = 400;
@@ -135,7 +135,7 @@ function reorder_boxes()                                                 // find
               no = i; gr = box_obj[i+OffsetB].mass;
             }
         }
-        // no is now the id of the biggest rectangle - which will now be divided
+        // "no" is now the id of the biggest rectangle - which will now be divided
 
         if(box_obj[no+OffsetB].aspect_ratio > 2)      // split wide rectangles vertically
           {
@@ -212,7 +212,7 @@ class text_box {
     }
   }
 
-  calculate() {
+  calculate() {                         // calculate the aspect ratio of the given string in its font
     push();
     textFont(this.font);
     let tbox = this.font.textBounds(this.text, 0, 0);
@@ -286,10 +286,10 @@ class rect_box {
     this.calculate();
   }
 
-  calculate() {
+  calculate() {                                              // calculate several properties of the box
     this.aspect_ratio = this.width / this.height;   
     this.mass = this.width+this.height;                      // a measure of size
-    this.order = this.posY + ((this.posX) / 3) + 10000;      // this helps to find the right reading order
+    this.order = this.posY + ((this.posX) / 7) + 10000;      // this helps to find the right reading order
   }
 
   draw_text() {
@@ -302,14 +302,6 @@ class rect_box {
     pop();
   }
 
-    /*
-  markieren(no){
-    push();
-    fill(0);textSize(10);
-    rect(no,this.posX,this.posY);
-    pop();
-  }
-      */
 }
 
 
