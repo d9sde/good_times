@@ -11,9 +11,9 @@ function generate_time_string()
     case 3: case 4: case 5: case 6: case 7: text+= "fünf nach "; break;
     case 8: case 9: case 10: case 11: case 12: text+= "zehn nach "; break;
     case 13: case 14: if(randomizer % 2 == 0) {text+= "kurz vor viertel "; h++;} else text+= "gleich viertel nach "; break;
-    case 15: if(randomizer % 2 == 0) {text+= "genau viertel "; h++;} else text+= "genau viertel nach "; h++; break;
-    case 16: case 17: if(randomizer % 2 == 0) {text+= "kurz nach viertel "; h++;} else text+= "viertel nach "; h++; break;
-    case 18: case 19: case 20: case 21: case 22: text+= randomizer%2 ? "zwanzig nach " : "zehn vor halb "; break;
+    case 15: if(randomizer % 2 == 0) {text+= "genau viertel "; h++;} else text+= "genau viertel nach "; break;
+    case 16: case 17: if(randomizer % 2 == 0) {text+= "kurz nach viertel "; h++;} else text+= "viertel nach "; break;
+    case 18: case 19: case 20: case 21: case 22: if(randomizer % 2 == 0) {text+= "zehn vor halb "; h++;} else text+= "zwanzig nach "; break;
     case 23: case 24: case 25: case 26: case 27: text+= "fünf vor halb "; h++; break;
     case 28: case 29: text+= "kurz vor halb "; h++; break;
     case 30: text+= "genau halb "; h++; break;
